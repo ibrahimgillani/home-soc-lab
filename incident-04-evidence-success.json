@@ -1,0 +1,95 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.04",
+  "_id": "8GrgBaEBAk4-vQJhy0AM",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "ibrahim-gillani-VMware-Virtual-Platform",
+      "program_name": "sshd-session",
+      "timestamp": "Oct 04 07:46:16"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.227.129",
+      "name": "ubuntu-endpoint",
+      "id": "002"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "srcip": "192.168.227.132",
+      "dstuser": "ibrahim-gillani",
+      "srcport": "48168"
+    },
+    "rule": {
+      "mail": false,
+      "level": 3,
+      "hipaa": [
+        "164.312.b"
+      ],
+      "pci_dss": [
+        "10.2.5"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "sshd: authentication success.",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_success"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Valid Accounts",
+          "Remote Services"
+        ],
+        "id": [
+          "T1078",
+          "T1021"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Persistence",
+          "Privilege Escalation",
+          "Initial Access",
+          "Lateral Movement"
+        ]
+      },
+      "id": "5715",
+      "gpg13": [
+        "7.1",
+        "7.2"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "id": "1791099977.2467625",
+    "full_log": "Oct 04 07:46:16 ibrahim-gillani-VMware-Virtual-Platform sshd-session[6850]: Accepted password for ibrahim-gillani from 192.168.227.132 port 48168 ssh2",
+    "timestamp": "2026-10-04T07:46:17.124+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-04T07:46:17.124Z"
+    ]
+  },
+  "sort": [
+    1791099977124
+  ]
+}

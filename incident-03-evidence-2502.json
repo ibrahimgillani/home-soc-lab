@@ -1,0 +1,85 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.04",
+  "_id": "cuVnBaEB_I1hVaKh4Gd9",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "ibrahim-gillani-VMware-Virtual-Platform",
+      "program_name": "sshd-session",
+      "timestamp": "Oct 04 05:34:12"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.227.129",
+      "name": "ubuntu-endpoint",
+      "id": "002"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "rule": {
+      "mail": false,
+      "level": 10,
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "syslog: User missed the password more than one time",
+      "groups": [
+        "syslog",
+        "access_control",
+        "authentication_failed"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Brute Force"
+        ],
+        "id": [
+          "T1110"
+        ],
+        "tactic": [
+          "Credential Access"
+        ]
+      },
+      "id": "2502",
+      "gpg13": [
+        "7.8"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "name": "sshd"
+    },
+    "id": "1791092053.2408703",
+    "full_log": "Oct 04 05:34:12 ibrahim-gillani-VMware-Virtual-Platform sshd-session[11244]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.227.1",
+    "timestamp": "2026-10-04T05:34:13.557+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-04T05:34:13.557Z"
+    ]
+  },
+  "sort": [
+    1791092053557
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.04",
+  "_id": "9GrgBaEBAk4-vQJhy0C4",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "ibrahim-gillani-VMware-Virtual-Platform",
+      "program_name": "sshd-session",
+      "timestamp": "Oct 04 07:46:18"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.227.129",
+      "name": "ubuntu-endpoint",
+      "id": "002"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "srcip": "192.168.227.132",
+      "dstuser": "ibrahim-gillani",
+      "srcport": "48144"
+    },
+    "rule": {
+      "mail": false,
+      "level": 5,
+      "hipaa": [
+        "164.312.b"
+      ],
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "sshd: authentication failed.",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 3,
+      "mitre": {
+        "technique": [
+          "Password Guessing",
+          "SSH"
+        ],
+        "id": [
+          "T1110.001",
+          "T1021.004"
+        ],
+        "tactic": [
+          "Credential Access",
+          "Lateral Movement"
+        ]
+      },
+      "id": "5760",
+      "gpg13": [
+        "7.1"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "id": "1791099979.2469675",
+    "full_log": "Oct 04 07:46:18 ibrahim-gillani-VMware-Virtual-Platform sshd-session[6847]: Failed password for ibrahim-gillani from 192.168.227.132 port 48144 ssh2",
+    "timestamp": "2026-10-04T07:46:19.024+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-04T07:46:19.024Z"
+    ]
+  },
+  "sort": [
+    1791099979024
+  ]
+}
